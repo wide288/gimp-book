@@ -1,0 +1,191 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<head><title>GIMP 用户指南 --- wide288</title>
+</head>
+<body>
+作者：wide288@LinuxSir.org 最后修改：2009-7-10<br><br>
+Copyright @ 2008 2009 wide288<br><br>
+<h3>编辑菜单</h3><br />
+<img src="images/00046.jpg"><strong></strong><br>
+<img src="images/00047.jpg"><strong></strong><br><hr>
+目录
+<hr>
+<a href="#undo">撤消</a><br>
+<a href="#do">重做</a><br>
+<a href="#sub">淡出</a><br>
+<a href="#history">撤消历史</a><br>
+<a href="#cut">剪切</a><br>
+<a href="#copy">复制</a><br>
+<a href="#copysee">复制可见</a><br>
+<a href="#paste">粘贴</a><br>
+<a href="#pastein">粘贴进入</a><br>
+<a href="#pasteto">粘贴为</a><br>
+&nbsp;&nbsp;<a href="#newfile">新建图像</a><br>
+&nbsp;&nbsp;<a href="#newlayut">新建图层</a><br>
+&nbsp;&nbsp;<a href="#newbrush">新建画笔</a><br>
+&nbsp;&nbsp;<a href="#newpic">新建图案</a><br>
+<a href="#area">缓冲区</a><br />
+&nbsp;&nbsp;<a href="#namecut">命名剪切</a><br>
+&nbsp;&nbsp;<a href="#namecopy">命名复制</a><br>
+&nbsp;&nbsp;<a href="#namecopysee">命名复制可见</a><br>
+&nbsp;&nbsp;<a href="#namepaste">命名粘贴</a><br>
+<a href="#delete">清除</a><br>
+<a href="#colorf">以前景色填充</a><br>
+<a href="#colorb">以背景色填充</a><br>
+<a href="#pic">以图案填充</a><br>
+<a href="#drawselect">勾画选区</a><br>
+<a href="#drawarea">勾画路径</a><br>
+<a href="#option">首选项</a><br>
+<a href="#hotkey">快捷键</a><br>
+<a href="#model">模块</a><br>
+<a href="#set">单位</a><br>
+<hr>
+<strong id="undo">撤消</strong><br />&nbsp;&nbsp;“撤销”让图像回到上一步涂画或编辑过程。几乎所有对图像的动作都可以用这种方 法撤销。能被撤销的操作数量则需要在首选项对话框的环境页中设置。<br><br />
+快捷键是：Ctrl - Z<br />
+<hr>
+<strong id="do">重做</strong><br>&nbsp;&nbsp;
+“重做”与“撤销”的效果相反。每个“撤销”都可以被单步的“重做”返回，直到图像回 到其最终状态，相反也一样。需要注意只有最后的动作是“撤销”时，“重做”才是可 用的。如果对图像操作“撤销”后又进行了其它的操作，那么就无法通过“重做”来恢 复了。<br /><br />
+快捷键是：Ctrl - Y<br />
+<hr>
+<strong id="sub">淡出</strong><br>&nbsp;&nbsp;
+修改最后一次象素处理的绘图模式和透明度。（我没试出实例。）
+<hr>
+<strong id="history">撤消历史</strong><br>
+<img src="images/00258.jpg"><br />&nbsp;&nbsp;
+“撤销历史”开启撤销历史对话框，你可以在图像的撤销历史中随意移动，这样就能同时撤销很多步。 <br />
+<hr>
+<strong id="cut">剪切</strong><br>
+&nbsp;&nbsp;
+将选中的象素移动到剪贴板。 <br />
+<hr>
+<strong id="copy">复制</strong><br>
+&nbsp;&nbsp;
+将选中的象素复制到剪贴板。 <br />
+<hr>
+<strong id="copysee">复制可见</strong><br>
+&nbsp;&nbsp;
+<br />
+<hr>
+<strong id="paste">粘贴</strong><br>
+&nbsp;&nbsp;
+<br />
+<hr>
+<strong id="pastein">粘贴进入</strong><br>
+&nbsp;&nbsp;
+<br />
+<hr>
+<strong id="pasteto">粘贴为</strong><br>
+&nbsp;&nbsp;<strong id="newfile">新建图像</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;通过剪贴板内的内容创建新图像。<br />
+&nbsp;&nbsp;<strong id="newlayut">新建图层</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;通过剪贴板内的内容创建新图层。<br />
+&nbsp;&nbsp;<strong id="newbrush">新建画笔</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;通过剪贴板内的内容创建新画笔。<br />
+&nbsp;&nbsp;<strong id="newpic">新建图案</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;通过剪贴板内的内容创建新图案。<br />
+<br />
+<hr>
+<strong id="area">缓冲区</strong><br>
+&nbsp;&nbsp;<strong id="namecut">命名剪切</strong><br>
+<img src="images/00260.jpg"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;如图，为缓冲区命名。<br />
+&nbsp;&nbsp;<strong id="namecopy">命名复制</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;如同“命名剪切”。<br />
+&nbsp;&nbsp;<strong id="namecopysee">命名复制可见</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;如同“命名剪切”。<br />
+&nbsp;&nbsp;<strong id="namepaste">命名粘贴</strong><br>
+<img src="images/00259.jpg"><br />
+&nbsp;&nbsp;&nbsp;&nbsp;如图，管理缓冲区的对话框。<br />
+<br />
+<hr>
+<strong id="delete">清除</strong><br>
+&nbsp;&nbsp;清除当前图层的所有图像内容，显示出缺省背景。
+<br />
+<hr>
+<strong id="colorf">以前景色填充</strong><br>
+&nbsp;&nbsp;用前景色填充当前图层。
+<br />
+<hr>
+<strong id="colorb">以背景色填充</strong><br>
+&nbsp;&nbsp;用背景色填充当前图层。
+<br />
+<hr><strong id="pic">以图案填充</strong><br>
+&nbsp;&nbsp;用图案填充当前图层。
+<br />
+<hr><strong id="drawselect">勾画选区</strong><br>
+<img src="images/00261.jpg"><br />
+&nbsp;&nbsp;首先，选择一个选区<br />
+&nbsp;&nbsp;其次，执行本命令，显示如图对话框。可以勾画出选区的边界线，可以设置线宽，什么颜色，或者用图案代替颜色来勾选出边界线。还可以从“线风格”中详细设置有关线型的设置。
+<br />
+<hr><strong id="drawarea">勾画路径</strong><br>
+<img src="images/00262.jpg"><br />
+&nbsp;&nbsp;首先，选择一个路径<br />
+&nbsp;&nbsp;接着如图，跟勾画选区基本一样。
+<br />
+<hr><strong id="option">首选项</strong><br>
+<img src="images/00127.jpg"><br />
+&nbsp;&nbsp;软件与系统有关的设置。<br /><br />
+<img src="images/00263.jpg"><br />
+&nbsp;&nbsp;用户界面设置，和快捷键设置。<br /><br />
+<img src="images/00264.jpg"><br />
+&nbsp;&nbsp;软件主题设置。<br /><br />
+<img src="images/00265.jpg"><br />
+&nbsp;&nbsp;软件帮助系统设置。<br /><br />
+<img src="images/00266.jpg"><br />
+&nbsp;&nbsp;工具选项设置。<br /><br />
+<img src="images/00267.jpg"><br />
+&nbsp;&nbsp;工具箱的设置。<br /><br />
+<img src="images/00268.jpg"><br />
+&nbsp;&nbsp;创建新图像时的默认设置。<br /><br />
+<img src="images/00269.jpg"><br />
+&nbsp;&nbsp;图像网格设置。<br /><br />
+<img src="images/00270.jpg"><br />
+&nbsp;&nbsp;图像窗口的常用设置。<br /><br />
+<img src="images/00271.jpg"><br />
+&nbsp;&nbsp;设置软件界面。<br /><br />
+<img src="images/00272.jpg"><br />
+&nbsp;&nbsp;符号意义为：<br />
+%D - 是否修改。<br />
+%f - 文件名。<br />
+%t - 色彩模式。<br />
+%L - 图层数量。<br />
+%w - 图像宽。<br />
+%h - 图像高。<br />
+%z%% - 缩放百分比。<br />
+%d:%s - 显示比例。<br />
+%n - 当前图层名。<br />
+%m - 图像大小。<br />
+%p - <br />
+%i - <br /><br />
+<img src="images/00273.jpg"><br />
+&nbsp;&nbsp;显示设置。<br /><br />
+<img src="images/00274.jpg"><br />
+&nbsp;&nbsp;设置图像文件的色彩管理。<br /><br />
+<img src="images/00275.jpg"><br />
+&nbsp;&nbsp;配置输入设备。<br /><br />
+<img src="images/00276.jpg"><br />
+&nbsp;&nbsp;输入设备设置。<br /><br />
+<img src="images/00277.jpg"><br />
+&nbsp;&nbsp;设置窗口的一般设置，值有：普遍窗口，工具窗口，保持在上方。<br /><br />
+<img src="images/00278.jpg"><br />
+&nbsp;&nbsp;设置文件夹的定位。<br /><br />
+<img src="images/00279.jpg"><br />
+&nbsp;&nbsp;存放画笔的文件夹，注意这是 windows xp 系统上的。与 Linux 系统不一样。<br /><br />
+<img src="images/00280.jpg"><br />
+&nbsp;&nbsp;存放图案的文件夹，注意这是 windows xp 系统上的。与 Linux 系统不一样。其它常用文件夹就不一一介绍了。点击进去一看便知。<br />
+<br />
+<hr><strong id="hotkey">快捷键</strong><br>
+<img src="images/00281.jpg"><br />
+&nbsp;&nbsp;设置快捷键。<br />
+<br />
+<hr><strong id="model">模块</strong><br>
+<img src="images/00282.jpg"><br />
+&nbsp;&nbsp;模块管理器。<br />
+<br />
+<hr><strong id="set">单位</strong><br>
+<img src="images/00283.jpg"><br />
+&nbsp;&nbsp;单位编辑器。<br />
+<br />
+<hr>
+</body>
+</html>

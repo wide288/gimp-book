@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>GIMP 用户指南 --- wide288</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body>
+作者：wide288@LinuxSir.org 最后修改：2009-9-1<br><br>
+Copyright @ 2008 2009 wide288<hr>
+<a href="index.htm">返回主页</a><br />
+<center><h2>模 式</h2></center>
+模式是应用层和上色的有力工具。<br />
+<hr>
+模式（分为很多种）。查看模式的方法，如有二个图层 A 和 B，A 层在上。对 A 层应用模式。查看结果。<br><br>
+<img src="images/00128.jpg" align="left"><br /><br />
+<strong>正常</strong>---正常模式是默认模式，不做特别处理。<br />
+<img src="images/model/001.png"><br />
+<strong>融化</strong>（Dissolve）溶解---与正常模式相似，但是它用于半透明。它显示的像素或者是完全透明的或者是纯色的，这根据你设的不透明度来确定。为了看到这个模式的效果，要通过不断调节图层的不透明度的滑块来查看。<br /><br />
+<img src="images/model/002.png">正常模式 A 层不透明度50%。
+<img src="images/model/003.png">融化 A 层不透明度50%。<img src="images/model/004.png"><br />
+<strong>背后</strong>（画笔）<br />
+画笔直接画在 B 层上。<br />
+<img src="images/model/025.png"><br /><br />
+<strong>颜色擦除</strong>（画笔）<br />
+把画笔的笔迹的颜色减淡。<br />
+<img src="images/model/026.png"><br /><br />
+相乘---这个模式把该层的像素亮度值与其下层可见的像素亮度值相乘。<br />公式 E=(A*B)/255<br /><br />
+<img src="images/model/005.png"><br /><br />
+<strong>相除</strong>（Divide）---这个模式把该层的像素亮度值与其下层可见的像素亮度值相除。<br />公式 E=B*256/(A+1)<br /><br />
+<img src="images/model/006.png"><br /><br />
+<strong>掩蔽</strong>（Screen）---两个图层中可见像素的亮度值先反向，相乘后再反向。其结果常常使一个更明亮的图像。<br />公式 E=255-(255-A)*(255-B)/255<br /><br />
+<img src="images/model/007.png"><br /><br />
+<strong>覆盖</strong>（Overlay）---此模式，中度灰是透明的。背景是最重要的层，覆盖层只用来改变背景层。<br />前景中的亮和暗区通过加强高亮、颜色或阴影来影响背景，所以背景的白色、黑色或 RGB/CMY 部分不受影响，不能加强黑色的阴影，增亮白色区域，也不能用最大颜色值增加颜色。<br />
+覆盖综合了相乘和掩蔽模式。
+亮的更亮,暗的更暗;<br />
+公式 E=(1B/255)*(B+(2A/255)*(255-B))<br />
+<img src="images/model/008.png"><br /><br />
+<strong>减淡</strong>（Dodge）---两个图层的亮度值反向，相除后再方向。其结果使上面图层变亮。<br />公式 E=B*256/((255-A)+B)<br /><br />
+<img src="images/model/009.png"><br /><br />
+<strong>加深</strong>（Burn）---加深模式交换两个图层的亮度值，相乘后再反向。其结果使上面图层变暗。<br />
+公式 E=255-(255-B)*256/(A+1)<br /><br />
+<img src="images/model/010.png"><br /><br />
+<strong>硬光</strong>(也有的叫"硬光") Hard light---该模式综合了掩蔽和相乘模式。<br />
+A>128:E=255-(255-B)*(255-(2*(A-128)))/256<br />
+A<=128:E=B*A*2/256<br /><br />
+<img src="images/model/012.png">原图&nbsp;<img src="images/model/011.png">硬光图<br /><br />
+<strong>柔光</strong>（Soft light）---该模式产生“软”的图像边缘，并使色彩变亮。<br />
+方程式复杂,要用到一个不知道是什么的东西 Rs<br />
+Rs=(255-((255-B)*255-A))/255<br />
+E=(((255-I)*A*B)+(B*Rs))/255<br />
+<img src="images/model/013.png"><br /><br />
+<strong>增益提取</strong>（Grain extract）---从某层提取“胶片纹理”，放到没有纹理的新层。<br />
+公式 E=B-A+128<br /><br />
+<img src="images/model/014.png"><br /><br />
+<strong>增益合并</strong>（Grain merge）---合并一个纹理层（可能来于增益提取操作)到当前层，保留原层的纹理版本。<br />
+公式 E=B+A-128<br /><br />
+<img src="images/model/015.png"><br /><br />
+<strong>差值</strong>（Difference）<br />
+公式 E=|B-A|<br /><br />
+<img src="images/model/016.png"><br /><br />
+<strong>相加</strong>（Addition）---一个简单的操作，在各点增加像素亮度。<br />
+公式 E=min((A+B),255)<br /><br />
+<img src="images/model/017.png"><br /><br />
+<strong>减去</strong>（Subtract）---一个简单的操作，在各点减少像素亮度。<br />
+公式 E = max((B-A),0)<br /><br />
+<img src="images/model/018.png"><br /><br />
+<strong>仅变暗</strong>（Darken only）--- HSV 色彩模型相关,得到的显示输出结果是两个图层像素中最小的亮度值。<br />
+公式 E=min(A, B)<br /><br />
+<img src="images/model/019.png"><br /><br />
+<strong>仅变亮</strong>（Lighten only）--- HSV 色彩模型相关,两个图层像素中最大的亮度值作为输出结果亮度,保留一定程度下一图层的色调和饱和度。<br />
+公式 E = max(A, B)<br /><br />
+<img src="images/model/020.png"><br /><br />
+<strong>色调</strong>（Hue）--- HSV 色彩模型相关,通常输出结果是,下一图层的可显示像素上色调值 H 使用的上一图层的色调值,使用一定程度下一图层的亮度 V 和饱和度 S;<br /><br />
+<img src="images/model/021.png"><br /><br />
+<strong>饱和度</strong>（Saturation）--- HSV 色彩模型相关, 通常是上一图层的饱和度值 S 应用在下一图层可见的像素上, 保留一定程度下一图层的亮度 V 和色调值 H;<br /><br />
+<img src="images/model/022.png"><br /><br />
+<strong>颜色</strong>（Color）--- HSV 色彩模型相关, 通常是上一图层的色调值 H 和饱和度值 S 应用在下一图层可见的像素上, 保留一定程度下一图层的亮度 V, 调节图层透明度会减少上一图层的颜色值同时增加下一图层的颜色值;
+另外,白色,黑色和灰色的色调和饱和度值都为 0。<br /><br />
+<img src="images/model/023.png"><br /><br />
+<strong>明度</strong>（Value）--- HSV 色彩模型相关, 通常是上一图层的亮度值 V 应用在下一图层可见的像素上, 保留一定程度下一图层的色彩 H 和饱和度 S, 调节图层透明度会减少上一图层的亮度值同时增加下一图层的亮度值;
+左边显示一个正常模式的图像，右边显示同两个图层在亮度模式下的图像。<br /><br />
+<img src="images/model/024.png"><br /><br />
+<br />
+<a href="index.htm">返回主页</a>
+</body>
+</html>

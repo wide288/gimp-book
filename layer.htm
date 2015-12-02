@@ -1,0 +1,129 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<head><title>GIMP 用户指南 --- wide288</title>
+</head>
+<body>
+作者：wide288@LinuxSir.org 最后修改：2009-7-12<br><br>
+Copyright @ 2008 2009 wide288<br><br>
+<h3>图层菜单</h3><br />
+<img src="images/00054.jpg"><strong></strong><br>
+<img src="images/00055.jpg"><strong></strong><br>
+<img src="images/00056.jpg"><strong></strong><br>
+<img src="images/00057.jpg"><strong></strong><br><hr>
+目录
+<hr>
+<a href="#n1">新建图层</a><br>
+<a href="#n2">从可见项创建（New from Visible）</a><br>
+<a href="#n3">复制图层</a><br>
+<a href="#n4">固定图层</a><br>
+<a href="#n5">向下合并</a><br>
+<a href="#n6">删除图层</a><br>
+<a href="#n7">堆栈</a><br>
+&nbsp;&nbsp;<a href="#n8">选择前一图层</a><br>
+&nbsp;&nbsp;<a href="#n9">选择后一图层</a><br>
+&nbsp;&nbsp;<a href="#n10">选择顶端图层</a><br>
+&nbsp;&nbsp;<a href="#n11">选择底端图层</a><br>
+&nbsp;&nbsp;<a href="#n12">升高图层</a><br>
+&nbsp;&nbsp;<a href="#n13">降低图层</a><br>
+&nbsp;&nbsp;<a href="#n14">图层升至顶端</a><br>
+&nbsp;&nbsp;<a href="#n15">图层降至低端</a><br>
+&nbsp;&nbsp;<a href="#n16">反转图层顺序（Reverse Layer Order）</a><br>
+<a href="#n17">蒙板</a><br>
+&nbsp;&nbsp;<a href="#n18">添加图层蒙板</a><br>
+&nbsp;&nbsp;<a href="#n19">应用图层蒙板</a><br>
+&nbsp;&nbsp;<a href="#n20">删除图层蒙板</a><br>
+&nbsp;&nbsp;<a href="#n21">显示图层蒙板</a><br>
+&nbsp;&nbsp;<a href="#n22">编辑图层蒙板</a><br>
+&nbsp;&nbsp;<a href="#n23">禁用图层蒙板</a><br>
+&nbsp;&nbsp;<a href="#n24">蒙板到选区</a><br>
+&nbsp;&nbsp;<a href="#n25">添加到选区</a><br>
+&nbsp;&nbsp;<a href="#n26">从选区中减去</a><br>
+&nbsp;&nbsp;<a href="#n27">与选区相交</a><br>
+<a href="#n28">透明</a><br>
+&nbsp;&nbsp;<a href="#n29">添加 Alpha 通道</a><br>
+&nbsp;&nbsp;<a href="#n30">删除 Alpha 通道</a><br>
+&nbsp;&nbsp;<a href="#n31">Alpha 阈值</a><br>
+&nbsp;&nbsp;<a href="#n32">半平整</a><br>
+&nbsp;&nbsp;<a href="#n33">颜色到 Alpha</a><br>
+&nbsp;&nbsp;<a href="#n34">Alpha 到选区</a><br>
+&nbsp;&nbsp;<a href="#n35">添加到选区</a><br>
+&nbsp;&nbsp;<a href="#n36">从选区中减去</a><br>
+&nbsp;&nbsp;<a href="#n37">与选区相交</a><br>
+<a href="#n38">变换</a><br>
+&nbsp;&nbsp;<a href="#n39">水平翻转</a><br>
+&nbsp;&nbsp;<a href="#n40">垂直翻转</a><br>
+&nbsp;&nbsp;<a href="#n41">顺时针旋转90度</a><br>
+&nbsp;&nbsp;<a href="#n42">逆时针旋转90度</a><br>
+&nbsp;&nbsp;<a href="#n43">旋转180度</a><br>
+&nbsp;&nbsp;<a href="#n44">任意旋转</a><br>
+&nbsp;&nbsp;<a href="#n45">位移</a><br>
+<a href="#n46">图层边界大小</a><br>
+<a href="#n47">图层到图像大小</a><br>
+<a href="#n48">缩放图层</a><br>
+<a href="#n49">剪栽到选区</a><br>
+<a href="#n50">自动剪栽图层</a><br>
+<hr>
+<strong id="n1">新建图层</strong><br />&nbsp;&nbsp;创建新图层并将它添加到图像。<br />
+&nbsp;&nbsp;快捷键：Shift + Ctrl + N<br />
+<hr>
+<strong id="n2">从可见项创建</strong><br />&nbsp;&nbsp;根据可见项创建新图层。复制最顶上的可见图层创建新图层，如果所有图层不可见，则创建一透明背景的图层。<br /><hr>
+<strong id="n3">复制图层</strong><br />&nbsp;&nbsp;创建图层的副本，并将其添加到图像。<br /><hr>
+<strong id="n4">固定图层</strong><br />&nbsp;&nbsp;固定浮动图层。<br /><hr>
+<strong id="n5">向下合并</strong><br />&nbsp;&nbsp;将此图层与其下的一层合并。<br /><hr>
+<strong id="n6">删除图层</strong><br />&nbsp;&nbsp;删除此图层。<br /><hr>
+<strong id="n7">堆栈</strong><br />&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<strong id="n8">选择前一图层</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;选择活动图层上方的图层。<br />
+&nbsp;&nbsp;<strong id="n9">选择后一图层</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;选择活动图层下方的图层。<br />
+&nbsp;&nbsp;<strong id="n10">选择顶端图层</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;选择最顶端图层<br />
+&nbsp;&nbsp;<strong id="n11">选择底端图层</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;选择最底端图层<br />
+&nbsp;&nbsp;<strong id="n12">升高图层</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;使此图层上升一步。<br />
+&nbsp;&nbsp;<strong id="n13">降低图层</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;使此图层下降一步。<br />
+&nbsp;&nbsp;<strong id="n14">图层升至顶端</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;使此图层升至最顶端。<br />
+&nbsp;&nbsp;<strong id="n15">图层降至低端</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;使此图层升至最低端。<br />
+&nbsp;&nbsp;<strong id="n16">反转图层顺序</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;反转图像中图层顺序。<br /><hr>
+<strong id="n17">蒙板</strong><br />&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<strong id="n18">添加图层蒙板</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;添加蒙板以允许对透明度的非破坏性编辑。如图<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/00319.jpg"><br />
+&nbsp;&nbsp;<strong id="n19">应用图层蒙板</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;应用图层蒙板，并删除它。<br />
+&nbsp;&nbsp;<strong id="n20">删除图层蒙板</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;删除图层蒙板。<br />
+&nbsp;&nbsp;<strong id="n21">显示图层蒙板</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;显示图层蒙板。开关选项。<br />
+&nbsp;&nbsp;<strong id="n22">编辑图层蒙板</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;在图层蒙板上工作，开关选项。<br />
+&nbsp;&nbsp;<strong id="n23">禁用图层蒙板</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;禁用图层蒙板效果。开关选项。<br />
+&nbsp;&nbsp;<strong id="n24">蒙板到选区</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;用图层蒙板代替选区。通过图层蒙板，再通过此功能可选择出选区。<br />
+&nbsp;&nbsp;<strong id="n25">添加到选区</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;将图层蒙板添加到当前选区。<br />
+&nbsp;&nbsp;<strong id="n26">从选区中减去</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;当前选区与图层蒙板的交集。<br />
+&nbsp;&nbsp;<strong id="n27">与选区相交</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;取得选区减去图层蒙板的集。<br /><hr>
+<strong id="n28">透明</strong><br />&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<strong id="n29">添加 Alpha 通道</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;添加透明度信息到图层。<br />
+&nbsp;&nbsp;<strong id="n30">删除 Alpha 通道</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;删除图层的透明度信息。<br />
+&nbsp;&nbsp;<strong id="n31">Alpha 阈值</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;令透明度满或空，如图<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/00320.jpg"><br />
+&nbsp;&nbsp;<strong id="n32">半平整</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;以当前背景色部分替换透明度。<br />
+&nbsp;&nbsp;<strong id="n33">颜色到 Alpha</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;将指定的颜色转换为透明。<br />
+&nbsp;&nbsp;<strong id="n34">Alpha 到选区</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;用图层的 Alpha 通道替换选区。<br />
+&nbsp;&nbsp;<strong id="n35">添加到选区</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;将图层 Alpha 通道添加到当前选区。<br />
+&nbsp;&nbsp;<strong id="n36">从选区中减去</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;从当前选区减去图层的 Alpha 通道。<br />
+&nbsp;&nbsp;<strong id="n37">与选区相交</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;图层的 Alpha 通道与选区的交集。<br />
+<hr>
+<strong id="n38">变换</strong><br />&nbsp;&nbsp;<br />
+&nbsp;&nbsp;<strong id="n39">水平翻转</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;即镜像。像照镜子一样的效果。<br />
+&nbsp;&nbsp;<strong id="n40">垂直翻转</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;垂直方向的镜像。<br />
+&nbsp;&nbsp;<strong id="n41">顺时针旋转90度</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;向右手边旋转90度。<br />
+&nbsp;&nbsp;<strong id="n42">逆时针旋转90度</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;向左手边旋转90度。<br />
+&nbsp;&nbsp;<strong id="n43">旋转180度
+</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;不分左右，呵呵，旋转180度，效果是一样的。<br />
+&nbsp;&nbsp;<strong id="n44">任意旋转</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;任意角度旋转，如图<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/00321.jpg"><br />
+&nbsp;&nbsp;<strong id="n45">位移</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;像素偏移，在图像边缘处可以设置成循环。<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/00322.jpg"><br />
+<hr>
+<strong id="n46">图层边界大小</strong><br />&nbsp;&nbsp;调整图层边界大小。<br /><hr>
+<strong id="n47">图层到图像大小</strong><br />&nbsp;&nbsp;将图层的大小设置成图像的尺寸。<br /><hr>
+<strong id="n48">缩放图层
+</strong><br />&nbsp;&nbsp;改变此图层内容的大小。<br /><hr>
+<strong id="n49">剪栽到选区</strong><br />&nbsp;&nbsp;剪栽图层到选区的范围。<br /><hr>
+<strong id="n50">自动剪栽图层
+</strong><br />&nbsp;&nbsp;移动图层中，空（没有内容）的边缘。<br /><hr>
+</body>
+</html>

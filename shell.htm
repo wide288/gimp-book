@@ -1,0 +1,113 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<head><title>GIMP 用户指南 --- wide288</title>
+</head>
+<body>
+作者：wide288@LinuxSir.org 最后修改：2009-9-2<br><br>
+Copyright @ 2008 2009 wide288<hr>
+<a href="index.htm">返回主页</a>
+<h3>脚本</h3>
+<hr>
+GIMP 中的 Script-Fu 叫做"宏"。但是它比宏的功能更加强大。所以我叫它脚本。Script-Fu 基于一种名叫“Scheme”的解释性语言并以向 GIMP 数据库使用查询函数的方式来进行工作。<br />
+我们可以用 Script-Fu 来做任何事。这里需要你的想象力。<br />
+这里不介绍很复杂的功能，因为那样和本书的步调不一至。本书的目标就是从简单开始一点点学会如果更好的使用 GIMP 来创建或处理数字图像。当然这并不是说就不讲解脚本的编程知识。如果工作需要那是可以讲的。另外由于作者水平问题，GIMP 的功能并不能全部讲解。如脚本，GIMP 并不只支持 Script-Fu， GIMP 还支持 Perl 和 Tcl。有的朋友会这两种脚本，所以学习在 GIMP 中使用它们可能会更好。但是这里我就不能帮助你们了。因为我不会用。<br />
+<br />
+好了，我们开始学习吧。<br />
+Script-Fu 每一项说明都由括号括住。<br />
+函数的名字或操作符总是括号里的第一项，其它项是函数的参数。<br />
+数学操作符（如加号）也被认为是函数。如：(+ 1 3) ，表示的意思是：1 + 3<br />
+&nbsp;&nbsp;这叫做前缀表示法。<br />
+<br />
+<strong>变量</strong><br />
+let* 结构，分别给变量 a 和 b，初始化值 1 和 2。<br />
+<pre>
+(let*  (
+          (a 1)
+          (b 2)
+        )
+        (+ a b)
+)
+<br /><br />
+也可以写成一行的样子，如：<br />
+(let*	(	(a 1) (b 2)	)	(+ a b)	)<br />
+</pre>
+上面的变量定义是局部变量。<br />
+如果使用的是控制台窗口，就必须把它们放到一行里。<br />
+<br />
+let* 的语法：<br />
+(let* (变量) 表达式)<br /><br />
+set! 改变变量的值<br />
+set! 变量值<br /><br />
+<strong>函数</strong><br />
+(define (函数名 变量名称) 表达式)<br />
+<br />例如：(define (AddXY inX inY) (+ inX inY) )<br />
+变量没有类型<br />
+函数的最后一个语句就是返回值<br /><br />
+<strong>列表</strong><br />
+ (let* ( (x '(1 3 5)) ) x )<br />
+ 输出：（1 3 5）<br /><br />
+ 定义列表的语法：<br />
+ '(a b c)<br />
+ a b c 是常数<br />
+<pre>
+(let* 
+ ( 
+  (x 
+    '("The Gimp" (1 2 3) ("is" "great" ()) )
+  ) 
+ ) x 
+)</pre>
+输出是：<br />
+("The Gimp" (1 2 3) ("is" "great" ()))<br />
+<br />
+<i><b>cons</b></i> 添加一个元素作为列表的头。<br />
+> (cons 1 '(2 3 4))<br />
+(1 2 3 4)<br /><br />
+
+<i><b>list</b></i> 定义一个由常量或变量组成的列表。<br />
+> (list 5 4 3 2 1)<br />
+(5 4 3 2 1)<br /><br />
+
+<i><b>car</b></i> 返回列表的第一个元素（列表的头），列表要求非空。<br />
+例如：<br />
+> (car '("first" 2 "third"))<br />
+"first"<br /><br />
+<i><b>cdr</b></i> 返回列表的第一个元素之后的剩余部分（列表的尾），如列表中只有一个元素，返回的就是一个空列表。<br />
+例如：<br />
+> (cdr '("first" 2 "third"))<br />
+(2 "third")<br /><br />
+> (cdr '("first"))<br />
+()<br /><br />
+<i><b>caadr</b></i> 可以访问列表尾部的头部。<br /><br />
+<i><b>cddr</b></i> 访问列表尾部的尾部。<br /><br />
+<hr>
+自已写的脚本文件存在那里？<br />
+Linux 系统， 存在 Home/.gimp/script 下。<br />
+Windows XP 系统， 存在 C:\Documents and Settings\Administrator\.gimp-2.6\scripts 下<br /><br />
+每一个脚本至少要定义一个函数，这个函数就是脚本的主函数。<br />
+(define (script-fu-text-box inText inFont inFontSize inTextColor))<br />
+<hr>
+<strong>注册函数</strong><br />
+<pre>
+(script-fu-register
+	"script-fu-text-box"	;函数名
+	"&lt;Image&gt;/File/New/FX-Foundry/Render"						;菜单路径
+	"创建一个简单的文本框。"
+	"wide288"	;作者
+	"版权 2009 wide288"		;版权注释
+	"2009-09-02"			;创建日期
+	""							;脚本工作的图像类型
+	SF-VALUE	"Text:"			"\"Text Box\""		;文本值
+	SF-VALUE	"Font:"			"\"Charter\""		;文本值
+	SF-VALUE	"Font size:"		"45"			;文本值
+	SF-COLOR	"Color:"			'(0 0 0)			;颜色值
+)
+</pre>
+脚本文件的扩展名为 scm 。<br />
+菜单路径是：图像窗口->文件->创建->FX-Foundry->Render->Planet render <br />
+<img src="images/00586.jpg" border="1"><br /><br />
+<img src="images/00587.jpg"><br />
+<br />
+<a href="index.htm">返回主页</a>
+</body>
+</html>
